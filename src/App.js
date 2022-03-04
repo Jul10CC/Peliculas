@@ -1,23 +1,17 @@
-import './App.css';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Bloc from'./Bloc.js';
 import ListadoPeliculas from './ListadoPeliculas';
-import Bloc from './Bloc';
-import { BrowserRouter,  Routes ,Route , Switch } from 'react-router-dom';
 
-
-function App() {
-
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/">
-          <ListadoPeliculas />
-        </Route>
-        <Route path="/bloc">
-          <Bloc />
-        </Route>
-      </Switch>
-    </BrowserRouter>
-  );
+function App(){
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<ListadoPeliculas/>}/>
+				<Route path="/bloc" element={<Bloc/>}/>
+			</Routes>
+			{/* Switch fue reemplazado por Routes */}
+		</Router>
+	);
 }
 
 export default App;
