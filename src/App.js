@@ -6,6 +6,7 @@ import Pelicula from './Pelicula';
 import peliculasJson from './peliculas.json';
 
 function App() {
+
   const [paginaActual, setPaginaActual] = useState(1);
   const TOTAL_POR_PAGINA = 7;
 
